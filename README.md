@@ -1,19 +1,18 @@
 # ZmarG-TUI-text-editor
 <p align='center'>
 	<i>
-		"minimal, is this text editor, not built for the user, but for its creator's sanity." <br>
-			-Sun Tzu 2025
+		"minimal, is this text editor, not built for the user, but for its creator's sanity." <br> <br>
+		-Sun Tzu (2025)
 	</i>
 </p>
 
 ---
-# Features
+# Features (or lack thereof)
 - Built Different 🔥 Not for your Convenience 🔥
 - Basic **file creation**, **preview** and **editing (inconveniently!!)** 🔥
 - Saves file into the *same directory* as the **executable!!** what!?! 😲🔥
 - I can't stop adding the **fire emoji!!** 🔥🔥 
 
----
 # Compile & Install
 ```bash
 git clone https://github.com/Z-marG/ZmarG-TUI-text-editor.git
@@ -21,7 +20,7 @@ cd ZmarG-TUI-text-editor/
 gcc main.c -o ./text-editor
 ```
 
-# Usage 
+# Usage
 text surrounded by \*{}* are user input
 ```
 $ ./text-editor
