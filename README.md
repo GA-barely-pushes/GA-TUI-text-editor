@@ -1,8 +1,17 @@
 # ZmarG-TUI-text-editor
-A text editor purely made for fun in C and the stdio.h library only, ~~complete~~ with file creation, file content preview and editing.
+<p align='center'>
+	<i>
+		"minimal, is this text editor, not built for the user, but for its creator's sanity." <br>
+			-Sun Tzu 2025
+	</i>
+</p>
 
-this was built not because it is simple to use let alone be useful, this was *simply* made for my purposive learning of file handling in C and string buffers.
-might add dynamically allocated memory using stdlib.h if i feel like it
+---
+# Features
+- Built Different 🔥 Not for your Convenience 🔥
+- Basic **file creation**, **preview** and **editing (inconveniently!!)** 🔥
+- Saves file into the *same directory* as the **executable!!** what!?! 😲🔥
+- I can't stop adding the **fire emoji!!** 🔥🔥 
 
 ---
 # Compile & Install
@@ -46,7 +55,7 @@ New Contents: [Press ESC in a line after your last and press ENTER to save and e
 [1]	*{Hello!}*
 [2]	*{World!}*
 [3]	
-[~]	*{^[}* (this is seen when pressing ESC)
+[~]	*{^[}* <- (ESC Pressed, because i havent imported real time user input!! 🔥)
 
 --------------------------------
 
