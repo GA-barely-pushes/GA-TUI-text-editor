@@ -46,7 +46,7 @@ New Contents: [Press ESC in a line after your last and press ENTER to save and e
 [1]	*{Hello!}*
 [2]	*{World!}*
 [3]	
-[~]	*{^[}*
+[~]	*{^[}* (this is seen when pressing ESC)
 
 --------------------------------
 
