@@ -69,11 +69,10 @@ start:
     choice = upper(choice);
     switch (choice) {
     case 'Y':
-      printf("\n[Creating file...]\n");
+      printf("");
       FILE *writeMyFile = fopen(myFile, "w");
       fclose(writeMyFile);
       readMyFile = fopen(myFile, "r");
-      printf(GREEN "\n[File Created!]\n" RESET);
       break;
     case 'N':
       goto end;
