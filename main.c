@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define INTRO "\nWelcome to Zmar-G's crappy text editor\n\n"
+#define INTRO "\nWelcome to Zian's Shitty text editor\n\n"
 
 #define RED "\x1b[31m"
 #define YELLOW "\x1b[33m"
@@ -9,6 +9,9 @@
 #define BOLD "\x1b[1m"
 
 #define size 1024
+
+// TODO: make it arguable, if argument is empty it asks for file within running
+// process.
 
 char upper(char myChar) {
   if (myChar >= 'a' && myChar <= 'z')
@@ -27,21 +30,27 @@ void removeNl(char myString[], int *cCount) {
     *cCount += pos;
 }
 
-int main() {
+int main(int argc, char *argv[]) {
+
   printf(INTRO);
 
-  printf("\nInitializing Buffers...\n");
   char myFile[size / 32];
-  printf("\nFile name buffer... " GREEN "[ready!]" RESET);
   char buf[size][size];
-  printf("\nText data buffer... " GREEN "[ready!]\n" RESET);
 
-  printf("\nWhat is your file name?\n\t~> ");
-  if (fgets(myFile, 32, stdin) == (void *)0) {
-    printf(RED "\nInput Error!\n" RESET);
+  if (argc == 1) {
+    printf(RESET "\nWhat is your file name?\n\t~> ");
+    if (fgets(myFile, sizeof(myFile), stdin) == (void *)0) {
+      printf(RED "\nInput Error!\n" RESET);
+      return 1;
+    }
+  } else if (argc == 2) {
+    for (int i = 0; argv[1][i] != 0 && argv[1][i] != 10; i++)
+      myFile[i] = argv[1][i];
+  } else {
+    printf(RED "\nToo Many Arguments!\n" RESET);
     return 1;
   }
-  printf("\nOpening File...\n");
+
   removeNl(myFile, (void *)0);
 
   FILE *readMyFile = fopen(myFile, "r");
@@ -51,7 +60,7 @@ start:
   if (readMyFile == (void *)0) {
     printf(YELLOW "\nFile Doesn't Exist!\n");
     printf(RESET "\nWould you like to create it?\n[" GREEN "y" RESET "/" RED
-                 "n" RESET "]\t~> " GREEN);
+                 "n" RESET "]\t~> " YELLOW);
     char choice;
     if ((scanf(" %c", &choice)) == 0) {
       printf(RED "\nInput Error!\n" RESET);
@@ -74,7 +83,8 @@ start:
       return 1;
     }
   } else {
-    printf(RESET "\nFile Contents:\n");
+    printf(RESET "\n--------------------------------\n");
+    printf("\nFile Contents:\n");
     printf("\n");
     rewind(readMyFile);
     lineCount = 0;
@@ -87,10 +97,11 @@ start:
     printf("\n--------------------------------\n");
     printf("Line Count: [" GREEN "%d" RESET "]", lineCount);
     printf("\nCharacter Count: [" GREEN "%d" RESET "]\n", characterCount);
+    printf("\n");
   }
 
   printf("\nWould You Like to Edit it?\n[" GREEN "y" RESET "/" RED "n" RESET
-         "]\t~> " GREEN);
+         "]\t~> " YELLOW);
   {
     char choice;
     if ((scanf(" %c", &choice)) == 0) {
@@ -160,7 +171,6 @@ start:
   }
 
   printf("\n--------------------------------\n");
-  printf(RESET "\nSaving file...\n");
 
   FILE *writeMyFile = fopen(myFile, "w");
 
@@ -169,7 +179,6 @@ start:
   } else {
     for (int i = 0; i < line; i++)
       fputs(buf[i], writeMyFile);
-    printf(GREEN "\nFile " BOLD "saved!\n");
   }
 
   fclose(writeMyFile);
