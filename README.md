@@ -22,9 +22,9 @@ gcc main.c -o ./text-editor
 ```
 
 # Usage
-text surrounded by \*{}* are user input
+text surrounded by \*{ }* are user input
 ```
-$ *{./text-editor example.txt}*
+$ *{ ./text-editor example.txt }*
 
 Welcome to GA's Crappy text editor
 
@@ -32,16 +32,16 @@ Welcome to GA's Crappy text editor
 File Doesn't Exist!
 
 Would you like to create it?
-[y/n]	~> *{y}*
+[y/n]	~> *{ y }*
 
 Would You Like to Edit it?
-[y/n]	~> *{y}*
+[y/n]	~> *{ y }*
 
 New Contents: [Press ESC in a new line and ENTER to save and exit]
-[1]	*{Hello!}*
-[2]	*{World!}*
+[1]	*{ Hello! }*
+[2]	*{ World! }*
 [3]	
-[~]	*{^[}* <- (When ESC is pressed)
+[~]	*{ ^[ }* <- (When ESC is pressed)
 
 --------------------------------
 
@@ -58,10 +58,9 @@ Character Count: [12]
 
 
 Would You Like to Edit it?
-[y/n]	~> *{n}*
+[y/n]	~> *{ n }*
 ```
-it saves in the same folder of the compiled executable <br>
-if no argument is passed the program will ask for a file name.
+it saves in the same folder of the compiled executable
 
 # Issues
 - Too many to count 🔥
