@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define INTRO "\nWelcome to Zmar-G's Crappy text editor\n\n"
+#define INTRO "\nWelcome to GA's Crappy text editor\n\n"
 
 #define RED "\x1b[31m"
 #define YELLOW "\x1b[33m"
@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
 
   printf(INTRO);
 
-  char myFile[size / 32];
+  char myFile[32];
   char buf[size][size];
 
   if (argc == 1) {
