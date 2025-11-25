@@ -10,6 +10,7 @@
 # Features (or lack thereof)
 - Built Different 🔥 Not for your Convenience 🔥
 - Basic **file creation**, **preview** and **editing (inconveniently!!)** 🔥
+- Takes in file names as the only argument 🔥🔥🔥
 - Saves file into the *same directory* as the **executable!!** what!?! 😲🔥
 - I can't stop adding the **fire emoji!!** 🔥🔥 
 
