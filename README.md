@@ -1,4 +1,4 @@
-# ZmarG-TUI-text-editor
+# GA-TUI-text-editor
 <p align='center'>
 	<i>
 		"minimal, is this text editor, not built for the user, but for its creator's sanity." <br> <br>
@@ -15,8 +15,8 @@
 
 # Compile & Install
 ```bash
-git clone https://github.com/Z-marG/ZmarG-TUI-text-editor.git
-cd ZmarG-TUI-text-editor/
+git clone https://github.com/GA-barely-pushes/GA-TUI-text-editor.git
+cd GA-TUI-text-editor/
 gcc main.c -o ./text-editor
 ```
 
@@ -25,7 +25,7 @@ text surrounded by \*{}* are user input
 ```
 $ *{./text-editor example.txt}*
 
-Welcome to Zmar-G's Crappy text editor
+Welcome to GA's Crappy text editor
 
 
 File Doesn't Exist!
